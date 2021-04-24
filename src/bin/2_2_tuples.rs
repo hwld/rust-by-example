@@ -9,7 +9,12 @@ impl fmt::Display for Matrix {
   }
 }
 
+fn transpose(matrix: Matrix) -> Matrix {
+  Matrix(matrix.0, matrix.2, matrix.1, matrix.3)
+}
+
 fn main() {
   let matrix = Matrix(1.1, 1.2, 2.1, 2.2);
-  println!("{}", matrix);
+  println!("Matrix:\n{}", matrix);
+  println!("Transpose:\n{}", transpose(matrix));
 }
